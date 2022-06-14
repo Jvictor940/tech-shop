@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2022_06_09_201235) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "label"
+    t.string "company"
+    t.string "item_name"
     t.float "price"
     t.text "item_desc"
     t.integer "user_id"
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 2022_06_09_201235) do
   end
 
   create_table "ratings", force: :cascade do |t|
+    t.float "rating"
     t.integer "item_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
